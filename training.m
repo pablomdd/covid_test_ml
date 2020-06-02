@@ -1,9 +1,9 @@
-function [W1,W2,b1,b2] = training(alpha, epochs, num_patterns, P, W1,W2, b1,b2, target,F)
+function [W1,W2,b1,b2] = training(alpha, epochs, num_patterns, p, W1,W2, b1,b2, target,F)
 % Training with backpropagation
     for i = 1:epochs
         for j = 1:num_patterns
-       
-    a1 = logsig(W1*P(j,:)' + b1);
+    P = [p{j}];   
+    a1 = logsig(W1*P(:,j) + b1);
     a2 = W2*a1 + b2;
     e = target(j) - a2;
     % df1 = (1 - a1).*a1;
@@ -18,7 +18,7 @@ function [W1,W2,b1,b2] = training(alpha, epochs, num_patterns, P, W1,W2, b1,b2, 
     s1 = D*W2'*s2;
     W2 = W2 - alpha*s2*a1';
     b2 = b2 - alpha*s2;
-    W1 = W1 - alpha*s1*P(j,:);
+    W1 = W1 - alpha*s1*P(:,j)';
     b1 = b1 - alpha*s1;   
         end    
     end
