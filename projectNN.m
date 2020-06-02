@@ -138,9 +138,9 @@ t = [1 1 1 -1 -1 -1];%Adaline targets
 N=5;%Number of neurons
 W1 = rand(N,2);%random weigth layer 1
 b1 = rand(N,1);%random bias layer 1
-W2 = rand(N,1);%random weigth layer 2
-b2 = rand(1,N);%random bias layer 2
-P = [Test1;Test2;Test3;Test4;Test5;Test6];
+W2 = rand(1,N);%random weigth layer 2
+b2 = rand(1,1);%random bias layer 2
+P = {Test1;Test2;Test3;Test4;Test5;Test6};
 F = zeros(1,N);
 
 %% Training
@@ -149,7 +149,7 @@ F = zeros(1,N);
 
 a1 = logsig(W11*Test1 + b11);
 a2 = W12*a1 + b12;
-fprintf(a2)
+
 %% Checkingmultiple trainings
 % figure(1)
 % plotting(W11, W12, b11, b12)
