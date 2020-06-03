@@ -245,14 +245,14 @@ P = {Test1;Test2;Test3;Test4;Test5;Test6;Test7;Test8;Test9;...
 F = zeros(1,N);
 
 %% Training
-[W11, W12, b11, b12] = training(0.000001, 8050, num_test, P, W1, W2, b1, b2, t, F);
-[W21, W22, b21, b22] = training(0.000001, 18100, num_test, P, W1, W2, b1, b2, t, F);
-[W31, W32, b31, b32] = training(0.000001, 6200, num_test, P, W1, W2, b1, b2, t, F);
-[W41, W42, b41, b42] = training(0.000001, 15300, num_test, P, W1, W2, b1, b2, t, F);
-[W51, W52, b51, b52] = training(0.000001, 4450, num_test, P, W1, W2, b1, b2, t, F);
-[W61, W62, b61, b62] = training(0.000001, 13500, num_test, P, W1, W2, b1, b2, t, F);
+[W11, W12, b11, b12] = training(0.0000002, 35000, num_test, P, W1, W2, b1, b2, t, F);
+[W21, W22, b21, b22] = training(0.0000003, 37000, num_test, P, W1, W2, b1, b2, t, F);
+[W31, W32, b31, b32] = training(0.0000004, 34000, num_test, P, W1, W2, b1, b2, t, F);
+[W41, W42, b41, b42] = training(0.0000005, 33000, num_test, P, W1, W2, b1, b2, t, F);
+[W51, W52, b51, b52] = training(0.0000006, 39050, num_test, P, W1, W2, b1, b2, t, F);
+[W61, W62, b61, b62] = training(0.0000007, 38500, num_test, P, W1, W2, b1, b2, t, F);
 [W71, W72, b71, b72] = training(0.000001, 2750, num_test, P, W1, W2, b1, b2, t, F);
-[W81, W82, b81, b82] = training(0.000001, 11900, num_test, P, W1, W2, b1, b2, t, F);
+[W81, W82, b81, b82] = training(0.0000005, 31000, num_test, P, W1, W2, b1, b2, t, F);
 
 %% Checking training
 Test_positivo = zeros(1,8);
